@@ -23,3 +23,13 @@ function shortcut(str) {
     return ['a', 'e', 'i', 'o', 'u'].indexOf(e) == -1 
   }).join('')
 }
+
+  var letter = string.split(‘’);
+  var arr = [];
+  for(let i = 0; i < letter.length; i++) {
+    if(!(letter[i] == ‘a’ || letter[i] == ‘e’|| letter[i] == ‘i’ ||letter[i] == ‘o’ || letter[i] == ‘u’)) {
+      arr.push(letter[i])
+    }
+  }
+  return arr.join(‘’)
+}
