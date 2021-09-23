@@ -25,3 +25,9 @@ function reverseFactorial(num) {
 }
   return 'None'
   }
+// ----------------------------------
+function reverseFactorial(num) {
+  let f = 1;
+  while (num > 1) num /= ++ f;
+  return num == 1 ? `${f}!` : 'None';
+}
