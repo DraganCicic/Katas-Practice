@@ -27,13 +27,11 @@ function filter_list(l) {
 // ----------------------------------------------------------
 function filter_list(l) {
 var res = [];
-            for(var i=0;i<l.length;i++)
-            {
-                if (typeof l[i] === "number")
-                {
-                    res.push(l[i]);
-                }
+  for(var i=0;i<l.length;i++){
+ if (typeof l[i] === "number"){
+    res.push(l[i]);
+}
   
-            }
-            return res;
+}
+  return res;
 }
