@@ -43,3 +43,5 @@ function songDecoder(song){
   return song.replace( re, ' ' ).trim();
 }
 
+// --------------------------------------------------------
+var songDecoder=s=>s.split`WUB`.filter(v=>v).join` `
