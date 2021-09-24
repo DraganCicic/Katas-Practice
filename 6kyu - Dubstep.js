@@ -45,3 +45,10 @@ function songDecoder(song){
 
 // --------------------------------------------------------
 var songDecoder=s=>s.split`WUB`.filter(v=>v).join` `
+
+// --------------------------------------------------------
+
+function songDecoder(str){
+let arr = str.split("WUB").filter(e => e !== '').join(" ").trim()
+return arr
+}
