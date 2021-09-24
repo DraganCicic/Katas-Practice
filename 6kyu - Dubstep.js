@@ -38,4 +38,8 @@ function songDecoder(song){
 
 // --------------------------------------------------------
 
+function songDecoder(song){
+  var re = /(WUB)+/g;
+  return song.replace( re, ' ' ).trim();
+}
 
