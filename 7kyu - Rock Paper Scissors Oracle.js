@@ -35,3 +35,29 @@ function oracle(gestures){
 }
   return counts.every (c => !c) ? "tie" : counts.map((v,i) => v >0 ? hands[i] : null).filter(v => v).join("/")
 }
+
+// --------------------------------------------------
+
+
+function oracle(gestures) {
+  let result = [];
+  
+  let obj = {
+    "rock": 0,
+    "paper": 0,
+    "scissors": 0
+  }
+  
+  for (let i = 0; i < gestures.length; i++) {
+    let gesture = gestures[i];
+    obj[gesture]++;
+  }
+  
+  if (obj.scissors > obj.paper) result.push("rock");
+  if (obj.rock > obj.scissors) result.push("paper");
+  if (obj.paper > obj.rock) result.push("scissors");
+  
+  return result.join("/") || "tie";
+}
+
+// --------------------------------------------------
