@@ -61,3 +61,44 @@ function oracle(gestures) {
 }
 
 // --------------------------------------------------
+
+function oracle(gestures) {
+  let rock = 0
+  let paper = 0
+  let scissors = 0
+
+  for (const gesture of gestures) {
+    if (gesture === 'rock') {
+      paper += 1
+      scissors -= 1
+    } else if (gesture === 'paper') {
+      rock -= 1
+      scissors += 1
+    } else {
+      rock += 1
+      paper -= 1
+    }
+  }
+
+  const result = []
+
+  if (rock > 0) {
+    result.push('rock')
+  }
+
+  if (paper > 0) {
+    result.push('paper')
+  }
+
+  if (scissors > 0) {
+    result.push('scissors')
+  }
+
+  if (!result.length) {
+    return 'tie'
+  }
+
+  return result.join('/')
+  
+  
+//   -------------------------------------
