@@ -30,3 +30,11 @@ function getSectionIdFromScroll(y, s){
    var t=0;
    return s.findIndex(e=>(t+=e)>y);
 }
+
+// -------------------------------------------
+
+{const f =getSectionIdFromScroll= (y, [size, ...arr], res = 0) => {
+  if (y < size) return res
+  if (!size) return -1
+  return f(y - size, arr, ++res)
+}}
