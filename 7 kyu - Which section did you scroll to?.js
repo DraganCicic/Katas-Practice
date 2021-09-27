@@ -24,3 +24,9 @@ let sum = 0;
     }
   return -1
   }
+// --------------------------------------------
+
+function getSectionIdFromScroll(y, s){
+   var t=0;
+   return s.findIndex(e=>(t+=e)>y);
+}
