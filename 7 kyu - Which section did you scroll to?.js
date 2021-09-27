@@ -51,3 +51,11 @@ function getSectionIdFromScroll(scrollY,sizes){
   
   return -1;
 }
+// --------------------------------------------
+
+function getSectionIdFromScroll(scrollY,sizes){
+  var i=0;
+  while (scrollY>=0)
+    scrollY-=sizes[i++]
+  return scrollY<0?--i:-1
+}
