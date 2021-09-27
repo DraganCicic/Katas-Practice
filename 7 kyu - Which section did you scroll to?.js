@@ -38,3 +38,16 @@ function getSectionIdFromScroll(y, s){
   if (!size) return -1
   return f(y - size, arr, ++res)
 }}
+// --------------------------------------------
+
+function getSectionIdFromScroll(scrollY,sizes){
+  let total = 0;
+  for (let i = 0; i < sizes.length; i++) {
+    total = total + sizes[i];
+    if (scrollY < total) {
+      return i;
+    }
+  }
+  
+  return -1;
+}
