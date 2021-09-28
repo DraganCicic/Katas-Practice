@@ -99,3 +99,13 @@ function sexyName(name) {
     return 'THE ULTIMATE SEXIEST';
   }
 }
+
+// -------------------------------------------
+
+
+function sexyName(name) {
+  let totalScore = [...name].map(e => SCORES[e.toUpperCase()] || 0).reduce((a, b) => a + b, 0);
+  return totalScore <= 60 ? 'NOT TOO SEXY':
+         totalScore  <= 300 ? 'PRETTY SEXY':
+         totalScore  <= 599 ? 'VERY SEXY': 'THE ULTIMATE SEXIEST'
+}
