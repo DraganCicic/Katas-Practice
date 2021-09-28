@@ -56,3 +56,21 @@ const sexyName = (function() {
 
 
 // --------------------------------------------
+function sexyName(name) {
+  let score = 0;
+  for (let key in SCORES) {
+    for (let letter of name) {
+      if (letter.toUpperCase() === key) {
+        score += SCORES[key];
+      }
+    }
+  }
+  return score <= 60 ? 'NOT TOO SEXY' 
+    :  61 <= score && score <= 300 ? 'PRETTY SEXY'
+    : 301 <= score && score <= 599 ? 'VERY SEXY'
+    : score >= 600 ? 'THE ULTIMATE SEXIEST'
+    : '';
+}
+
+
+// ------------------------------------------
