@@ -28,3 +28,31 @@ function sexyName(name) {
   const n = [...name.toUpperCase()].reduce((a, b) => a + (SCORES[b] || 0), 0)
   return n <= 60 ? 'NOT TOO SEXY' : n <= 300 ? 'PRETTY SEXY' : n <= 599 ? 'VERY SEXY' : 'THE ULTIMATE SEXIEST' 
 }
+
+// ---------------------------------------------
+
+
+const sexyName = (function() {
+  const conditionDesc = [
+    {cond: s => s <= 60, desc: 'NOT TOO SEXY'},
+    {cond: s => s >= 61 && s <= 300, desc: 'PRETTY SEXY'},
+    {cond: s => s >= 301 && s <= 599, desc: 'VERY SEXY'},
+    {cond: s => s >= 600, desc: 'THE ULTIMATE SEXIEST'},
+  ];
+
+  const assignDesc = score => {
+    let desc;
+    conditionDesc.some(cd => cd.cond(score) ? (desc=cd.desc, true) : false );
+    return desc;
+  };
+  
+  const score = n => n.split('').reduce(
+                (s, ch) => s + (SCORES[ch.toUpperCase()] || 0), 0);
+
+  return function(name) {
+    return assignDesc(score(name));
+  }
+})();
+
+
+// --------------------------------------------
