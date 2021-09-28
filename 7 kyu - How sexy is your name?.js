@@ -109,3 +109,31 @@ function sexyName(name) {
          totalScore  <= 300 ? 'PRETTY SEXY':
          totalScore  <= 599 ? 'VERY SEXY': 'THE ULTIMATE SEXIEST'
 }
+
+
+// ------------------------------------------
+
+
+function sexyName(name) {
+  let arr = name.toUpperCase().split('')
+  let score = 0 
+  
+  arr.forEach((item) => {
+    for (let key in SCORES) {
+      if (key == item) {
+        score = SCORES[key] + score
+      }
+    }
+  })
+              
+  if (score <= 60) {
+    return 'NOT TOO SEXY'
+  } else if (score <= 300) {
+    return 'PRETTY SEXY'
+  } else if (score <= 599) {
+    return 'VERY SEXY'
+  } else {
+    return 'THE ULTIMATE SEXIEST'
+  }
+  sexyName(score)
+}
