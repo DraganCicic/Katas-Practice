@@ -39,3 +39,18 @@ function sortVowels(s){
   if (typeof s === "string") return [...s].map(letter => vowels.includes(letter) ? `|${letter}` : `${letter}|`).join('\n');
   return '';
 }
+//--------------------------------------------------
+
+function sortVowels(s){
+  if (s==undefined) return '';
+  var arr=[];
+  for (var i=0; i<s.length; ++i)
+    if (s[i]=='a'||s[i]=='e'||s[i]=='u'||s[i]=='i'||s[i]=='o'||s[i]=='A'||s[i]=='E'||s[i]=='U'||s[i]=='I'||s[i]=='O')
+      arr.push('|'+s[i]);
+    else
+      arr.push(s[i]+'|');
+  return arr.join('\n');
+}
+
+//--------------------------------------------------
+
