@@ -38,3 +38,8 @@ function all(arr, fun){
 }
 
 // ----------------------------
+
+
+function all( arr, fun ){
+  return (fun(arr) === true) ? true : false;// ...
+}
