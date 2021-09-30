@@ -26,3 +26,15 @@ function all(arr, fun)
 }
 
 // ------------------------------
+
+function all(arr, fun){
+  let res = [];
+  for (let i in arr) {
+    if (fun(arr[i])) {
+      res.push(arr[i]);
+    }
+  }
+  return res.length == arr.length ? true : false;
+}
+
+// ----------------------------
