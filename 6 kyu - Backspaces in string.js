@@ -34,22 +34,6 @@ function cleanString(s) {
 
 // ------------------------------
 
-function cleanString(s) {
-
-  let result = ''
-  for(let i=0; i<s.length;i++){
-    //taking care of the letters of the string
-    if(s[i] !== "#"){
-      result += s[i]
-    } else {
-      //remove the last letter of result
-      result = result.slice(0, -1)
-    }
-  }
-  return result
-};
-
-// -------------------------------
 
 function cleanString(s) {
   let string = s;
