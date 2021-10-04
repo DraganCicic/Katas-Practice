@@ -63,3 +63,11 @@ function clean_string(s) {
   });
   return result;    
 }
+// ------------------------------
+
+
+function cleanString(s) {
+  let result = []; s.split('').map( e => { e === '#' ? result.pop() : result.push(e)
+  })
+  return result.join('');
+};
