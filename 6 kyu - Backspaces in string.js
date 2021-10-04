@@ -71,3 +71,17 @@ function cleanString(s) {
   })
   return result.join('');
 };
+
+// ------------------------------
+
+function cleanString(s) {
+  let result = [];
+  s.split('').map(e => {
+    if(e === '#') {
+      result.pop();
+    } else {
+      result.push(e)
+    }
+  })
+  return result.join('');
+};
