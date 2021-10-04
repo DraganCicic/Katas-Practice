@@ -148,3 +148,14 @@ function cleanString(s) {
   }
   return result
 };
+
+// -------------------------------------
+
+
+function cleanString(s) {
+  let result = []
+  s.split("").forEach((ele)=>{
+    ele == "#" ? result.pop() : result.push(ele)
+  })
+  return result.join("")
+};
