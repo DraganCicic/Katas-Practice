@@ -85,3 +85,23 @@ function cleanString(s) {
   })
   return result.join('');
 };
+
+
+
+// ------------------------------
+
+
+function cleanString(s) {
+    var output = "";
+
+    for (const letter of s) {
+        if (letter === '#') {
+            output = output.slice(0, -1);
+        }
+        else {
+            output += letter;
+        }
+    }
+
+    return output;
+};
