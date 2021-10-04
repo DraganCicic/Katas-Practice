@@ -105,3 +105,15 @@ function cleanString(s) {
 
     return output;
 };
+
+
+// ---------------------------------
+
+
+function cleanString(s) {
+  return s.split('')
+    .reduce(
+      (acc, letter) => letter !== '#' ? [...acc, letter] : acc.slice(0, -1)
+      , [])
+    .join('');
+};
