@@ -24,3 +24,10 @@ function findUniq(arr) {
 }
 
 // --------------------------------------
+function findUniq(arr) {
+  let [a,b,c] = arr.slice(0,3);
+  if( a != b && a!=c ) return a;
+  for( let x of arr ) if( x!=a ) return x
+}
+
+// -------------------------------------
