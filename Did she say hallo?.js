@@ -45,3 +45,21 @@ const validateHello = greetings => {
 }
 
 // ----------------------------------
+
+function validateHello(greetings) {
+  var known = ['hello','ciao','salut','hallo','hola','ahoj','czesc'];
+  res =  false;
+  if ( typeof greetings == "string") {
+    known.map(function(v){
+      regEx = new RegExp(v);
+      if (regEx.test(greetings.toLowerCase()) == true ) {
+        console.log("true" + v );
+        res =  true;
+        }
+    });
+  }
+  return res;
+}
+
+
+// ---------------------------------------------
