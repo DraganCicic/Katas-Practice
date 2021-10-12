@@ -48,3 +48,9 @@ function closeCompare(a, b, margin){
   }
   return a > b ? 1 : -1;
 }
+
+// --------------------------------
+
+
+
+var closeCompare = (a, b, margin=0) => a - margin > b ? 1 : a + margin < b ? -1 : 0
