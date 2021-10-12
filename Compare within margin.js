@@ -39,3 +39,12 @@ function closeCompare(a, b, margin = 0) {
   if (a - margin > b) return 1;
   return 0;
 }
+
+// ------------------------------
+
+function closeCompare(a, b, margin){
+  if(a == b || Math.abs(a - b) <= margin){
+    return 0
+  }
+  return a > b ? 1 : -1;
+}
