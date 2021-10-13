@@ -7,3 +7,7 @@ const square=(a)=> Math.pow(a,2);
 let square = function(a){
   return a*a;
 }
+// ---------------------
+function square(x) {
+  return x ** 2;
+}
