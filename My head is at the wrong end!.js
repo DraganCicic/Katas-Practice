@@ -9,3 +9,4 @@ function fixTheMeerkat(arr) {
 }
 
 //   ----------------------
+const fixTheMeerkat = arr => arr.slice().reverse();
