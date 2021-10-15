@@ -18,3 +18,16 @@ const areaOrPerimeter = function(l , w) {
 const areaOrPerimeter = function(l , w) {
   return l == w ? l*w : 2*(l + w)
 };
+
+// -----------------------------
+
+
+const areaOrPerimeter = function(l , w) {
+  if(l==w){
+  return l*w;
+  }
+  else{
+    (l>w)
+    return l*2+w*2;
+  }
+}
