@@ -9,3 +9,9 @@
 function stringToArray(string){
   return string.split(' ');
 }
+
+// -----------------------
+
+
+
+stringToArray=(s)=>s.split(' ')
