@@ -15,3 +15,13 @@ let arr = [];
     arr.push(i);
     } return arr;
 };
+
+// -----------------------------
+
+
+const reverseSeq = num => {
+  return new Array(num)
+      .fill()
+      .map((d, i) => i + 1)
+      .reverse()
+};
