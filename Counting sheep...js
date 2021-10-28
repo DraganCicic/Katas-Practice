@@ -19,12 +19,12 @@ function countSheeps(arrayOfSheeps) {
 
 
 function countSheeps(arrayOfSheep) {
+  let sum = 0;
   
-  let num = 0;
-  
-  for(let i = 0; i < arrayOfSheep.length; i++)
-    if(arrayOfSheep[i] == true)
-      num++;
-      
-  return num;
+  for (let i=0; i < arrayOfSheep.length; i++){
+    if(arrayOfSheep[i] === true){
+      sum ++;
+    }
+  }
+  return sum
 }
