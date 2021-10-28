@@ -10,3 +10,10 @@ function squareArea(A){
   return Number(Math.pow(2 * A / 3.1416, 2).toFixed(2))
 
 }
+
+// ---------------------
+
+function squareArea(A){
+  r = A * 2 / Math.PI;
+  return Math.round((r * r) * 100) / 100;
+}
