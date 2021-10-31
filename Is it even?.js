@@ -17,3 +17,13 @@ function testEven(n) {
 function testEven(n) {
   return (Math.round(n) & 1) === 0
 }
+
+// -------------------------
+
+function testEven(n) {
+   if ( n % 2 === 0){
+     return true
+   }else{
+     return false
+   }
+}
