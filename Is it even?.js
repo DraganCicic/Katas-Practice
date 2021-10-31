@@ -11,3 +11,9 @@
 function testEven(n) {
   return  n % 2 === 0
   }
+
+// -------------------------
+
+function testEven(n) {
+  return (Math.round(n) & 1) === 0
+}
