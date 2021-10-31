@@ -2,5 +2,5 @@
 
 function doubleInteger(i) {
   
-  return i * i;
+  return i * 2;
 }
