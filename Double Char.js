@@ -10,3 +10,10 @@
 function doubleChar(str) {
   return str.split("").map((letter) => `${letter}${letter}`).join("")
 }
+
+// -------------------------------
+
+
+function doubleChar(str) {
+  return str.replace(/(.)/g, "$1$1")
+}
