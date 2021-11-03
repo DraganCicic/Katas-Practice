@@ -18,3 +18,11 @@ function abbrevName(name){
     name = name.toUpperCase().split(' ');
     return name[0][0] + '.' + name[1][0];
 }
+// -----------------------
+
+
+const abbrevName = name =>
+  name
+    .split` `
+    .map(part => part[0].toUpperCase())
+    .join('.')
