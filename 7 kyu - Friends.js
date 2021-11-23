@@ -19,3 +19,14 @@
 function friends(n){
   return n<=2 ? 0 : ~~Math.log2(n-1);
 }
+
+// -----------------------------
+
+
+function friends(n, acc=0){
+  if(n <=2){
+    return acc;
+    }else{
+    return friends(n/2, acc +1)
+    }
+}
