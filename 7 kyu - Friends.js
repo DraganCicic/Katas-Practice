@@ -30,3 +30,8 @@ function friends(n, acc=0){
     return friends(n/2, acc +1)
     }
 }
+
+// -----------------------------
+function friends(n) {
+  return n > 1 ? Math.ceil(Math.log2(n)) - 1 : 0;
+}
