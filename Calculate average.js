@@ -12,3 +12,9 @@ function find_average(array) {
   }
   return result/array.length;
 }
+
+// --------------------------
+
+function find_average(array) {
+  return (Math.min(...array) + Math.max(...array)) / 2;
+}
