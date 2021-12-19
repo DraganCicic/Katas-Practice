@@ -44,3 +44,22 @@ const determinant = m =>
             determinant(m.slice(1).map(r => r.filter((_, j) => j !== i))),
         0
       );
+
+// ---------------------------------
+
+
+const determinant = m => {
+  const l = m.length;
+  if (l === 1) return m[0][0];
+  if (l === 2) return m[0][0] * m[1][1] - m[1][0] * m[0][1];
+
+  let result = 0;
+  for (let i = 0; i < l; i++) {
+    result += Math.pow(-1, i) * m[0][i] * determinant(minor(m, i, 0));
+  }
+  return result;
+};
+
+const minor = (m, i, j) => 
+  m.map(e => e.filter((_, index) => index !== i))
+    .filter((_, index) => index !== j);
