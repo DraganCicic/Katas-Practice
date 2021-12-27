@@ -17,3 +17,10 @@ var lcm = function () {
   }
   return Array.prototype.slice.apply(arguments).reduce(function(a,b) {return a*b / gcd(a,b);}, 1);
 };
+// ---------------------------
+
+const lcm = (...a) => {
+  const gcd = (a, b) => b === 0 ? a : gcd(b, a % b);
+  const lcm = (a, b) => a * b / gcd(a, b);
+  return a.reduce(lcm);
+}
