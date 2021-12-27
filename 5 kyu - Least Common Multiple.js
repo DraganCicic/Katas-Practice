@@ -6,3 +6,14 @@ var lcm = function (...args) {
   const lcm = (a, b) => Math.abs(a * b) / gcd(a, b);
   return args.reduce(lcm,1)
 };
+
+// ---------------------------
+
+
+var lcm = function () {
+  function gcd(a,b) {
+    if (a == 0) return b;
+    return gcd(b%a, a);
+  }
+  return Array.prototype.slice.apply(arguments).reduce(function(a,b) {return a*b / gcd(a,b);}, 1);
+};
