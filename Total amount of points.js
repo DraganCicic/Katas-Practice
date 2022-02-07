@@ -16,3 +16,17 @@
 const points=games=>games.reduce((output,current)=>{
     return output += current[0]>current[2] ? 3 : current[0]===current[2] ? 1 : 0;
   },0)
+
+// --------------------------------------------
+
+function points(games) {
+  var sum=0;
+  for (var i=0; i<games.length; ++i)
+  {
+    if (games[i][0]>games[i][2])
+      sum+=3;
+    if (games[i][0]==games[i][2])
+      sum+=1;
+  }
+  return sum;
+}
