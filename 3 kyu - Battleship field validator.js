@@ -11,7 +11,6 @@
 
 // This is all you need to solve this kata. If you're interested in more information about the game, visit this link.
 
-
 function validateBattlefield(field) {
   var hit = (row, col) => (row < 0 || col < 0 || row > 9 || col > 9) ? 0 : field[row][col];
   for (var ships = [10,0,0,0,0], row = 0; row < 10; row++) {
